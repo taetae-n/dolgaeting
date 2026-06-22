@@ -1,0 +1,1808 @@
+[
+  {
+    "name": "쯔위",
+    "groupName": "트와이스 (TWICE)",
+    "gender": "F",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=쯔위",
+    "tags": [
+      "여우상",
+      "강아지상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "나연",
+    "groupName": "트와이스 (TWICE)",
+    "gender": "F",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=나연",
+    "tags": [
+      "토끼상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "사나",
+    "groupName": "트와이스 (TWICE)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=사나",
+    "tags": [
+      "강아지상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "채영",
+    "groupName": "트와이스 (TWICE)",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=채영",
+    "tags": [
+      "호랑이상/맹수상",
+      "고양이상",
+      "큐트/러블리",
+      "시크/차가운",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "모모",
+    "groupName": "트와이스 (TWICE)",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=모모",
+    "tags": [
+      "고양이상",
+      "강아지상",
+      "섹시/퇴폐",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "태현",
+    "groupName": "투모로우바이투게더 (TXT)",
+    "gender": "M",
+    "mbti": "ESTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=태현",
+    "tags": [
+      "고양이상",
+      "다람쥐상/햄스터상",
+      "시크/차가운",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "수빈",
+    "groupName": "투모로우바이투게더 (TXT)",
+    "gender": "M",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=수빈",
+    "tags": [
+      "토끼상",
+      "강아지상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "휴닝카이",
+    "groupName": "투모로우바이투게더 (TXT)",
+    "gender": "M",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=휴닝카이",
+    "tags": [
+      "병아리상",
+      "강아지상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "연준",
+    "groupName": "투모로우바이투게더 (TXT)",
+    "gender": "M",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=연준",
+    "tags": [
+      "여우상",
+      "고양이상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "범규",
+    "groupName": "투모로우바이투게더 (TXT)",
+    "gender": "M",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=범규",
+    "tags": [
+      "곰상",
+      "강아지상",
+      "큐트/러블리",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "쥴리",
+    "groupName": "키스오브라이프 (KISS OF LIFE)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=쥴리",
+    "tags": [
+      "고양이상",
+      "다람쥐상/햄스터상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "나띠",
+    "groupName": "키스오브라이프 (KISS OF LIFE)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=나띠",
+    "tags": [
+      "고양이상",
+      "호랑이상/맹수상",
+      "섹시/퇴폐",
+      "시크/차가운",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "하늘",
+    "groupName": "키스오브라이프 (KISS OF LIFE)",
+    "gender": "F",
+    "mbti": "ESTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=하늘",
+    "tags": [
+      "토끼상",
+      "곰상",
+      "부드러운/따뜻한",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "벨",
+    "groupName": "키스오브라이프 (KISS OF LIFE)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=벨",
+    "tags": [
+      "토끼상",
+      "강아지상",
+      "청순/단아",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "정모",
+    "groupName": "크래비티 (CRAVITY)",
+    "gender": "M",
+    "mbti": "INTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=정모",
+    "tags": [
+      "고양이상",
+      "여우상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "원진",
+    "groupName": "크래비티 (CRAVITY)",
+    "gender": "M",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=원진",
+    "tags": [
+      "병아리상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "형준",
+    "groupName": "크래비티 (CRAVITY)",
+    "gender": "M",
+    "mbti": "INFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=형준",
+    "tags": [
+      "강아지상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "세림",
+    "groupName": "크래비티 (CRAVITY)",
+    "gender": "M",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=세림",
+    "tags": [
+      "늑대상",
+      "고양이상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "민희",
+    "groupName": "크래비티 (CRAVITY)",
+    "gender": "M",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=민희",
+    "tags": [
+      "강아지상",
+      "여우상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "우빈",
+    "groupName": "크래비티 (CRAVITY)",
+    "gender": "M",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=우빈",
+    "tags": [
+      "곰상",
+      "강아지상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "앨런",
+    "groupName": "크래비티 (CRAVITY)",
+    "gender": "M",
+    "mbti": "ISFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=앨런",
+    "tags": [
+      "고양이상",
+      "병아리상",
+      "부드러운/따뜻한",
+      "큐트/러블리",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "태영",
+    "groupName": "크래비티 (CRAVITY)",
+    "gender": "M",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=태영",
+    "tags": [
+      "고양이상",
+      "호랑이상/맹수상",
+      "시크/차가운",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "성민",
+    "groupName": "크래비티 (CRAVITY)",
+    "gender": "M",
+    "mbti": "INTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=성민",
+    "tags": [
+      "토끼상",
+      "고양이상",
+      "청순/단아",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "장하오",
+    "groupName": "제로베이스원 (ZEROBASEONE)",
+    "gender": "M",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=장하오",
+    "tags": [
+      "여우상",
+      "고양이상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "석매튜",
+    "groupName": "제로베이스원 (ZEROBASEONE)",
+    "gender": "M",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=석매튜",
+    "tags": [
+      "여우상",
+      "강아지상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "박건욱",
+    "groupName": "제로베이스원 (ZEROBASEONE)",
+    "gender": "M",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=박건욱",
+    "tags": [
+      "호랑이상/맹수상",
+      "곰상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "김지웅",
+    "groupName": "제로베이스원 (ZEROBASEONE)",
+    "gender": "M",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=김지웅",
+    "tags": [
+      "늑대상",
+      "고양이상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "리키",
+    "groupName": "제로베이스원 (ZEROBASEONE)",
+    "gender": "M",
+    "mbti": "INTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=리키",
+    "tags": [
+      "고양이상",
+      "여우상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "성한빈",
+    "groupName": "제로베이스원 (ZEROBASEONE)",
+    "gender": "M",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=성한빈",
+    "tags": [
+      "고양이상",
+      "다람쥐상/햄스터상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "김태래",
+    "groupName": "제로베이스원 (ZEROBASEONE)",
+    "gender": "M",
+    "mbti": "ENTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=김태래",
+    "tags": [
+      "강아지상",
+      "병아리상",
+      "부드러운/따뜻한",
+      "큐트/러블리",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "김규빈",
+    "groupName": "제로베이스원 (ZEROBASEONE)",
+    "gender": "M",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=김규빈",
+    "tags": [
+      "강아지상",
+      "늑대상",
+      "부드러운/따뜻한",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "한유진",
+    "groupName": "제로베이스원 (ZEROBASEONE)",
+    "gender": "M",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=한유진",
+    "tags": [
+      "토끼상",
+      "강아지상",
+      "청순/단아",
+      "큐트/러블리",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "선우",
+    "groupName": "엔하이픈 (ENHYPEN)",
+    "gender": "M",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=선우",
+    "tags": [
+      "여우상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "니키",
+    "groupName": "엔하이픈 (ENHYPEN)",
+    "gender": "M",
+    "mbti": "INTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=니키",
+    "tags": [
+      "호랑이상/맹수상",
+      "고양이상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "제이",
+    "groupName": "엔하이픈 (ENHYPEN)",
+    "gender": "M",
+    "mbti": "ENTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=제이",
+    "tags": [
+      "고양이상",
+      "늑대상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "성훈",
+    "groupName": "엔하이픈 (ENHYPEN)",
+    "gender": "M",
+    "mbti": "ISTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=성훈",
+    "tags": [
+      "강아지상",
+      "토끼상",
+      "청순/단아",
+      "시크/차가운",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "희승",
+    "groupName": "엔하이픈 (ENHYPEN)",
+    "gender": "M",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=희승",
+    "tags": [
+      "여우상",
+      "다람쥐상/햄스터상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "제이크",
+    "groupName": "엔하이픈 (ENHYPEN)",
+    "gender": "M",
+    "mbti": "ISTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=제이크",
+    "tags": [
+      "강아지상",
+      "늑대상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "정원",
+    "groupName": "엔하이픈 (ENHYPEN)",
+    "gender": "M",
+    "mbti": "ISTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=정원",
+    "tags": [
+      "고양이상",
+      "다람쥐상/햄스터상",
+      "시크/차가운",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "설윤",
+    "groupName": "엔믹스 (NMIXX)",
+    "gender": "F",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=설윤",
+    "tags": [
+      "토끼상",
+      "강아지상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "릴리",
+    "groupName": "엔믹스 (NMIXX)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=릴리",
+    "tags": [
+      "고양이상",
+      "토끼상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "규진",
+    "groupName": "엔믹스 (NMIXX)",
+    "gender": "F",
+    "mbti": "ESFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=규진",
+    "tags": [
+      "고양이상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "해원",
+    "groupName": "엔믹스 (NMIXX)",
+    "gender": "F",
+    "mbti": "ESTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=해원",
+    "tags": [
+      "곰상",
+      "다람쥐상/햄스터상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "배이",
+    "groupName": "엔믹스 (NMIXX)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=배이",
+    "tags": [
+      "병아리상",
+      "토끼상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "지우",
+    "groupName": "엔믹스 (NMIXX)",
+    "gender": "F",
+    "mbti": "ESFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=지우",
+    "tags": [
+      "강아지상",
+      "토끼상",
+      "큐트/러블리",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "백현",
+    "groupName": "엑소 (EXO)",
+    "gender": "M",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=백현",
+    "tags": [
+      "강아지상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "산",
+    "groupName": "에이티즈 (ATEEZ)",
+    "gender": "M",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=산",
+    "tags": [
+      "늑대상",
+      "고양이상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "윤호",
+    "groupName": "에이티즈 (ATEEZ)",
+    "gender": "M",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=윤호",
+    "tags": [
+      "강아지상",
+      "곰상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "홍중",
+    "groupName": "에이티즈 (ATEEZ)",
+    "gender": "M",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=홍중",
+    "tags": [
+      "다람쥐상/햄스터상",
+      "고양이상",
+      "시크/차가운",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "카리나",
+    "groupName": "에스파 (aespa)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=카리나",
+    "tags": [
+      "고양이상",
+      "여우상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "닝닝",
+    "groupName": "에스파 (aespa)",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=닝닝",
+    "tags": [
+      "고양이상",
+      "호랑이상/맹수상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "지젤",
+    "groupName": "에스파 (aespa)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=지젤",
+    "tags": [
+      "강아지상",
+      "다람쥐상/햄스터상",
+      "부드러운/따뜻한",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "윈터",
+    "groupName": "에스파 (aespa)",
+    "gender": "F",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=윈터",
+    "tags": [
+      "강아지상",
+      "토끼상",
+      "청순/단아",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "민주",
+    "groupName": "아일릿 (ILLIT)",
+    "gender": "F",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=민주",
+    "tags": [
+      "강아지상",
+      "병아리상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "이로하",
+    "groupName": "아일릿 (ILLIT)",
+    "gender": "F",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=이로하",
+    "tags": [
+      "강아지상",
+      "병아리상",
+      "큐트/러블리",
+      "청순/단아",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "모카",
+    "groupName": "아일릿 (ILLIT)",
+    "gender": "F",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=모카",
+    "tags": [
+      "다람쥐상/햄스터상",
+      "고양이상",
+      "큐트/러블리",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "원희",
+    "groupName": "아일릿 (ILLIT)",
+    "gender": "F",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=원희",
+    "tags": [
+      "병아리상",
+      "토끼상",
+      "큐트/러블리",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "윤아",
+    "groupName": "아일릿 (ILLIT)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=윤아",
+    "tags": [
+      "토끼상",
+      "강아지상",
+      "시크/차가운",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "가을",
+    "groupName": "아이브 (IVE)",
+    "gender": "F",
+    "mbti": "ISTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=가을",
+    "tags": [
+      "다람쥐상/햄스터상",
+      "강아지상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "레이",
+    "groupName": "아이브 (IVE)",
+    "gender": "F",
+    "mbti": "INFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=레이",
+    "tags": [
+      "병아리상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "리즈",
+    "groupName": "아이브 (IVE)",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=리즈",
+    "tags": [
+      "고양이상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "안유진",
+    "groupName": "아이브 (IVE)",
+    "gender": "F",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=안유진",
+    "tags": [
+      "강아지상",
+      "늑대상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "장원영",
+    "groupName": "아이브 (IVE)",
+    "gender": "F",
+    "mbti": "ENTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=장원영",
+    "tags": [
+      "토끼상",
+      "고양이상",
+      "큐트/러블리",
+      "시크/차가운",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "이서",
+    "groupName": "아이브 (IVE)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=이서",
+    "tags": [
+      "호랑이상/맹수상",
+      "고양이상",
+      "큐트/러블리",
+      "시크/차가운",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "한",
+    "groupName": "스트레이 키즈 (Stray Kids)",
+    "gender": "M",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=한",
+    "tags": [
+      "다람쥐상/햄스터상",
+      "곰상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "아이엔",
+    "groupName": "스트레이 키즈 (Stray Kids)",
+    "gender": "M",
+    "mbti": "INFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=아이엔",
+    "tags": [
+      "여우상",
+      "토끼상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "창빈",
+    "groupName": "스트레이 키즈 (Stray Kids)",
+    "gender": "M",
+    "mbti": "ESFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=창빈",
+    "tags": [
+      "토끼상",
+      "늑대상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "현진",
+    "groupName": "스트레이 키즈 (Stray Kids)",
+    "gender": "M",
+    "mbti": "ESTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=현진",
+    "tags": [
+      "여우상",
+      "늑대상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "방찬",
+    "groupName": "스트레이 키즈 (Stray Kids)",
+    "gender": "M",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=방찬",
+    "tags": [
+      "늑대상",
+      "곰상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "리노",
+    "groupName": "스트레이 키즈 (Stray Kids)",
+    "gender": "M",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=리노",
+    "tags": [
+      "고양이상",
+      "토끼상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "필릭스",
+    "groupName": "스트레이 키즈 (Stray Kids)",
+    "gender": "M",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=필릭스",
+    "tags": [
+      "고양이상",
+      "병아리상",
+      "큐트/러블리",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "승민",
+    "groupName": "스트레이 키즈 (Stray Kids)",
+    "gender": "M",
+    "mbti": "ISFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=승민",
+    "tags": [
+      "강아지상",
+      "곰상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "세은",
+    "groupName": "스테이씨 (STAYC)",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=세은",
+    "tags": [
+      "여우상",
+      "토끼상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "재이",
+    "groupName": "스테이씨 (STAYC)",
+    "gender": "F",
+    "mbti": "INFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=재이",
+    "tags": [
+      "강아지상",
+      "토끼상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "수민",
+    "groupName": "스테이씨 (STAYC)",
+    "gender": "F",
+    "mbti": "ESFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=수민",
+    "tags": [
+      "토끼상",
+      "강아지상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "시은",
+    "groupName": "스테이씨 (STAYC)",
+    "gender": "F",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=시은",
+    "tags": [
+      "다람쥐상/햄스터상",
+      "강아지상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "아이사",
+    "groupName": "스테이씨 (STAYC)",
+    "gender": "F",
+    "mbti": "ISFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=아이사",
+    "tags": [
+      "고양이상",
+      "여우상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "윤",
+    "groupName": "스테이씨 (STAYC)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=윤",
+    "tags": [
+      "호랑이상/맹수상",
+      "토끼상",
+      "시크/차가운",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "원우",
+    "groupName": "세븐틴",
+    "gender": "M",
+    "mbti": "INTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=원우",
+    "tags": [
+      "여우상",
+      "고양이상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "에스쿱스",
+    "groupName": "세븐틴",
+    "gender": "M",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=에스쿱스",
+    "tags": [
+      "토끼상",
+      "늑대상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "버논",
+    "groupName": "세븐틴",
+    "gender": "M",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=버논",
+    "tags": [
+      "곰상",
+      "늑대상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "호시",
+    "groupName": "세븐틴",
+    "gender": "M",
+    "mbti": "INTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=호시",
+    "tags": [
+      "호랑이상/맹수상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "민규",
+    "groupName": "세븐틴",
+    "gender": "M",
+    "mbti": "INTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=민규",
+    "tags": [
+      "강아지상",
+      "늑대상",
+      "부드러운/따뜻한",
+      "시크/차가운",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "지수",
+    "groupName": "블랙핑크 (BLACKPINK)",
+    "gender": "F",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=지수",
+    "tags": [
+      "강아지상",
+      "토끼상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "제니",
+    "groupName": "블랙핑크 (BLACKPINK)",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=제니",
+    "tags": [
+      "고양이상",
+      "곰상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "로제",
+    "groupName": "블랙핑크 (BLACKPINK)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=로제",
+    "tags": [
+      "다람쥐상/햄스터상",
+      "강아지상",
+      "청순/단아",
+      "시크/차가운",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "RM",
+    "groupName": "방탄소년단 (BTS)",
+    "gender": "M",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=RM",
+    "tags": [
+      "여우상",
+      "곰상",
+      "시크/차가운",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "슈가",
+    "groupName": "방탄소년단 (BTS)",
+    "gender": "M",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=슈가",
+    "tags": [
+      "고양이상",
+      "여우상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "뷔",
+    "groupName": "방탄소년단 (BTS)",
+    "gender": "M",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=뷔",
+    "tags": [
+      "곰상",
+      "호랑이상/맹수상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "지민",
+    "groupName": "방탄소년단 (BTS)",
+    "gender": "M",
+    "mbti": "ESTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=지민",
+    "tags": [
+      "병아리상",
+      "강아지상",
+      "큐트/러블리",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "진",
+    "groupName": "방탄소년단 (BTS)",
+    "gender": "M",
+    "mbti": "INTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=진",
+    "tags": [
+      "다람쥐상/햄스터상",
+      "강아지상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "제이홉",
+    "groupName": "방탄소년단 (BTS)",
+    "gender": "M",
+    "mbti": "INFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=제이홉",
+    "tags": [
+      "다람쥐상/햄스터상",
+      "강아지상",
+      "부드러운/따뜻한",
+      "큐트/러블리",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "정국",
+    "groupName": "방탄소년단 (BTS)",
+    "gender": "M",
+    "mbti": "INTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=정국",
+    "tags": [
+      "토끼상",
+      "강아지상",
+      "부드러운/따뜻한",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "카즈하",
+    "groupName": "르세라핌 (LE SSERAFIM)",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=카즈하",
+    "tags": [
+      "여우상",
+      "토끼상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "홍은채",
+    "groupName": "르세라핌 (LE SSERAFIM)",
+    "gender": "F",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=홍은채",
+    "tags": [
+      "병아리상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "허윤진",
+    "groupName": "르세라핌 (LE SSERAFIM)",
+    "gender": "F",
+    "mbti": "INFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=허윤진",
+    "tags": [
+      "호랑이상/맹수상",
+      "늑대상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "김채원",
+    "groupName": "르세라핌 (LE SSERAFIM)",
+    "gender": "F",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=김채원",
+    "tags": [
+      "고양이상",
+      "호랑이상/맹수상",
+      "큐트/러블리",
+      "시크/차가운",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "사쿠라",
+    "groupName": "르세라핌 (LE SSERAFIM)",
+    "gender": "F",
+    "mbti": "INTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=사쿠라",
+    "tags": [
+      "고양이상",
+      "다람쥐상/햄스터상",
+      "시크/차가운",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "슬기",
+    "groupName": "레드벨벳 (Red Velvet)",
+    "gender": "F",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=슬기",
+    "tags": [
+      "곰상",
+      "호랑이상/맹수상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "아이린",
+    "groupName": "레드벨벳 (Red Velvet)",
+    "gender": "F",
+    "mbti": "ISFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=아이린",
+    "tags": [
+      "토끼상",
+      "고양이상",
+      "청순/단아",
+      "시크/차가운",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "웬디",
+    "groupName": "레드벨벳 (Red Velvet)",
+    "gender": "F",
+    "mbti": "ISFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=웬디",
+    "tags": [
+      "다람쥐상/햄스터상",
+      "강아지상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "조이",
+    "groupName": "레드벨벳 (Red Velvet)",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=조이",
+    "tags": [
+      "강아지상",
+      "병아리상",
+      "큐트/러블리",
+      "청순/단아",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "앤톤",
+    "groupName": "라이즈 (RIIZE)",
+    "gender": "M",
+    "mbti": "INTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=앤톤",
+    "tags": [
+      "강아지상",
+      "곰상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "성찬",
+    "groupName": "라이즈 (RIIZE)",
+    "gender": "M",
+    "mbti": "ESTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=성찬",
+    "tags": [
+      "강아지상",
+      "토끼상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "쇼타로",
+    "groupName": "라이즈 (RIIZE)",
+    "gender": "M",
+    "mbti": "ESFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=쇼타로",
+    "tags": [
+      "다람쥐상/햄스터상",
+      "강아지상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "소희",
+    "groupName": "라이즈 (RIIZE)",
+    "gender": "M",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=소희",
+    "tags": [
+      "병아리상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "원빈",
+    "groupName": "라이즈 (RIIZE)",
+    "gender": "M",
+    "mbti": "ISTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=원빈",
+    "tags": [
+      "고양이상",
+      "병아리상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "은석",
+    "groupName": "라이즈 (RIIZE)",
+    "gender": "M",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=은석",
+    "tags": [
+      "토끼상",
+      "늑대상",
+      "시크/차가운",
+      "청순/단아",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "주연",
+    "groupName": "더보이즈 (THE BOYZ)",
+    "gender": "M",
+    "mbti": "ENTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=주연",
+    "tags": [
+      "고양이상",
+      "여우상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "선우",
+    "groupName": "더보이즈 (THE BOYZ)",
+    "gender": "M",
+    "mbti": "ENTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=선우",
+    "tags": [
+      "여우상",
+      "고양이상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "영훈",
+    "groupName": "더보이즈 (THE BOYZ)",
+    "gender": "M",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=영훈",
+    "tags": [
+      "강아지상",
+      "토끼상",
+      "청순/단아",
+      "시크/차가운",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "현재",
+    "groupName": "더보이즈 (THE BOYZ)",
+    "gender": "M",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=현재",
+    "tags": [
+      "곰상",
+      "강아지상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "민지",
+    "groupName": "뉴진스 (NewJeans)",
+    "gender": "F",
+    "mbti": "ESTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=민지",
+    "tags": [
+      "강아지상",
+      "곰상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "하니",
+    "groupName": "뉴진스 (NewJeans)",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=하니",
+    "tags": [
+      "토끼상",
+      "다람쥐상/햄스터상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "다니엘",
+    "groupName": "뉴진스 (NewJeans)",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=다니엘",
+    "tags": [
+      "토끼상",
+      "강아지상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "해린",
+    "groupName": "뉴진스 (NewJeans)",
+    "gender": "F",
+    "mbti": "ISTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=해린",
+    "tags": [
+      "고양이상",
+      "여우상",
+      "시크/차가운",
+      "청순/단아",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "혜인",
+    "groupName": "뉴진스 (NewJeans)",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=혜인",
+    "tags": [
+      "고양이상",
+      "다람쥐상/햄스터상",
+      "시크/차가운",
+      "큐트/러블리",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "도영",
+    "groupName": "NCT",
+    "gender": "M",
+    "mbti": "ISFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=도영",
+    "tags": [
+      "토끼상",
+      "고양이상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "마크",
+    "groupName": "NCT",
+    "gender": "M",
+    "mbti": "INFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=마크",
+    "tags": [
+      "호랑이상/맹수상",
+      "고양이상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "해찬",
+    "groupName": "NCT",
+    "gender": "M",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=해찬",
+    "tags": [
+      "강아지상",
+      "곰상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "태용",
+    "groupName": "NCT",
+    "gender": "M",
+    "mbti": "ENTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=태용",
+    "tags": [
+      "여우상",
+      "호랑이상/맹수상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "재현",
+    "groupName": "NCT",
+    "gender": "M",
+    "mbti": "ESTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=재현",
+    "tags": [
+      "강아지상",
+      "곰상",
+      "부드러운/따뜻한",
+      "청순/단아",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "예지",
+    "groupName": "ITZY",
+    "gender": "F",
+    "mbti": "ESTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=예지",
+    "tags": [
+      "여우상",
+      "고양이상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "류진",
+    "groupName": "ITZY",
+    "gender": "F",
+    "mbti": "INTJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=류진",
+    "tags": [
+      "고양이상",
+      "늑대상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "슈화",
+    "groupName": "(여자)아이들",
+    "gender": "F",
+    "mbti": "INFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=슈화",
+    "tags": [
+      "강아지상",
+      "고양이상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "미연",
+    "groupName": "(여자)아이들",
+    "gender": "F",
+    "mbti": "ENFP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=미연",
+    "tags": [
+      "토끼상",
+      "강아지상",
+      "청순/단아",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "우기",
+    "groupName": "(여자)아이들",
+    "gender": "F",
+    "mbti": "ESFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=우기",
+    "tags": [
+      "강아지상",
+      "고양이상",
+      "큐트/러블리",
+      "부드러운/따뜻한",
+      "쌍커풀"
+    ]
+  },
+  {
+    "name": "소연",
+    "groupName": "(여자)아이들",
+    "gender": "F",
+    "mbti": "INTP",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=소연",
+    "tags": [
+      "여우상",
+      "호랑이상/맹수상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "무쌍/속쌍"
+    ]
+  },
+  {
+    "name": "민니",
+    "groupName": "(여자)아이들",
+    "gender": "F",
+    "mbti": "ENFJ",
+    "photoUrl": "https://api.dicebear.com/7.x/thumbs/svg?seed=민니",
+    "tags": [
+      "고양이상",
+      "다람쥐상/햄스터상",
+      "시크/차가운",
+      "섹시/퇴폐",
+      "쌍커풀"
+    ]
+  }
+]
