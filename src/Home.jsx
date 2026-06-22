@@ -11,7 +11,7 @@ function Home() {
       alert('이름을 입력해주세요!')
       return
     }
-    navigate('/select')
+    navigate('/select', { state: { userName: userName, userMbti: userMbti } })
   }
 
   return (

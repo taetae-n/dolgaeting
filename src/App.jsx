@@ -4,6 +4,7 @@ import Admin from './Admin'
 import Manage from './Manage'
 import Select from './Select'
 import Play from './Play'
+import Result from './Result'
 
 function App() {
   return (
@@ -14,9 +15,11 @@ function App() {
         <Route path="/manage" element={<Manage />} />
         <Route path="/select" element={<Select />} />
         <Route path="/play/:gender" element={<Play />} />
+        <Route path="/result" element={<Result />} />
       </Routes>
     </BrowserRouter>
   )
 }
 
 export default App
+

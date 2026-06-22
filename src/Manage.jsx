@@ -8,6 +8,7 @@ function Manage() {
   const [selectedIdolTags, setSelectedIdolTags] = useState([])
   const [isEditing, setIsEditing] = useState(false)
   const [searchText, setSearchText] = useState('')
+  const [allTags, setAllTags] = useState([])
 
   function loadIdols() {
     fetch('http://localhost:8080/api/idols')
@@ -17,6 +18,9 @@ function Manage() {
 
   useEffect(() => {
     loadIdols()
+    fetch('http://localhost:8080/api/tags')
+      .then((res) => res.json())
+      .then((data) => setAllTags(data))
   }, [])
 
   function handleDelete(idolId) {
@@ -45,6 +49,31 @@ function Manage() {
     fetch('http://localhost:8080/api/idols/' + idol.id + '/tags')
       .then((res) => res.json())
       .then((data) => setSelectedIdolTags(data))
+  }
+
+  function toggleIdolTag(tagId) {
+    const hasTag = selectedIdolTags.some((t) => t.id === tagId)
+
+    if (hasTag) {
+      fetch('http://localhost:8080/api/idols/' + selectedIdol.id + '/tags/' + tagId, {
+        method: 'DELETE'
+      }).then(() => {
+        setSelectedIdolTags(selectedIdolTags.filter((t) => t.id !== tagId))
+      })
+    } else {
+      fetch('http://localhost:8080/api/idols/' + selectedIdol.id + '/tags/' + tagId, {
+        method: 'POST'
+      }).then(() => {
+        const addedTag = allTags.find((t) => t.id === tagId)
+        setSelectedIdolTags([...selectedIdolTags, addedTag])
+      })
+    }
+  }
+
+  const tagCategories = {
+    '동물상': ['강아지상','고양이상','여우상','곰상','토끼상','늑대상','다람쥐상/햄스터상','호랑이상/맹수상','병아리상'],
+    '분위기': ['청순/단아','큐트/러블리','섹시/퇴폐','시크/차가운','부드러운/따뜻한'],
+    '쌍꺼풀': ['쌍커풀','무쌍/속쌍']
   }
 
   const filteredIdols = idols.filter((idol) =>
@@ -157,6 +186,30 @@ function Manage() {
                 <div><label>소개: </label>
                   <textarea value={selectedIdol.introPoint || ''}
                     onChange={(e) => setSelectedIdol({ ...selectedIdol, introPoint: e.target.value })} />
+                </div>
+                <div style={{ marginTop: '16px' }}>
+                  <strong>태그 편집:</strong>
+                  {Object.keys(tagCategories).map((category) => (
+                    <div key={category} style={{ marginTop: '8px' }}>
+                      <em>{category}: </em>
+                      {allTags
+                        .filter((tag) => tagCategories[category].includes(tag.name))
+                        .map((tag) => (
+                          <span
+                            key={tag.id}
+                            onClick={() => toggleIdolTag(tag.id)}
+                            style={{
+                              marginRight: '8px',
+                              cursor: 'pointer',
+                              fontWeight: selectedIdolTags.some((t) => t.id === tag.id) ? 'bold' : 'normal',
+                              color: selectedIdolTags.some((t) => t.id === tag.id) ? 'blue' : 'gray'
+                            }}
+                          >
+                            #{tag.name}
+                          </span>
+                        ))}
+                    </div>
+                  ))}
                 </div>
                 <button onClick={handleUpdate}>수정 완료</button>
                 <button onClick={() => setIsEditing(false)} style={{ marginLeft: '8px' }}>취소</button>

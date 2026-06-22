@@ -1,10 +1,11 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 
 function Select() {
   const navigate = useNavigate()
+  const { state } = useLocation()
 
   function chooseGender(gender) {
-    navigate('/play/' + gender)
+    navigate('/play/' + gender, { state: state })
   }
 
   return (

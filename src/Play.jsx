@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useLocation } from 'react-router-dom'
 
 const TOTAL_ROUNDS = 5
 
@@ -9,6 +9,7 @@ function Play() {
   const [round, setRound] = useState(1)
   const navigate = useNavigate()
   const { gender } = useParams()
+  const { state } = useLocation()
   const [picks, setPicks] = useState([])
 
   useEffect(() => {
@@ -32,7 +33,7 @@ function Play() {
 
     if (round >= TOTAL_ROUNDS) {
       console.log('기록:', newPicks)
-      navigate('/result')
+      navigate('/result', { state: { ...state, picks: newPicks } })
       return
     }
     setRound(round + 1)
