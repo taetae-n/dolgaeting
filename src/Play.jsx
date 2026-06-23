@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams, useLocation } from 'react-router-dom'
 
-const TOTAL_ROUNDS = 20
+const TOTAL_ROUNDS = 30
 
 function Play() {
-  const [remaining, setRemaining] = useState([])
   const [idols, setIdols] = useState([])
   const [pair, setPair] = useState([])
   const [round, setRound] = useState(1)
+  const [picks, setPicks] = useState([])
+  const [remaining, setRemaining] = useState([])
   const navigate = useNavigate()
   const { gender } = useParams()
   const { state } = useLocation()
-  const [picks, setPicks] = useState([])
 
   useEffect(() => {
     fetch('http://localhost:8080/api/idols/gender/' + gender)
@@ -24,16 +24,16 @@ function Play() {
       })
   }, [])
 
- function handlePick(winner) {
+  function handlePick(winner) {
     const loser = pair.find((idol) => idol.id !== winner.id)
     const newPicks = [...picks, { winner: winner, loser: loser }]
     setPicks(newPicks)
 
     if (round >= TOTAL_ROUNDS) {
-      console.log('기록:', newPicks)
       navigate('/result', { state: { ...state, picks: newPicks, gender: gender } })
       return
     }
+
     setPair([remaining[0], remaining[1]])
     setRemaining(remaining.slice(2))
     setRound(round + 1)
@@ -54,33 +54,55 @@ function Play() {
   }
 
   if (pair.length < 2) {
-    return <div style={{ padding: '40px' }}>불러오는 중...</div>
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-900 to-black flex items-center justify-center">
+        <p className="text-white text-xl">불러오는 중...</p>
+      </div>
+    )
   }
 
   return (
-    <div style={{ padding: '40px', fontFamily: 'sans-serif', textAlign: 'center' }}>
-      <h2>{round} / {TOTAL_ROUNDS}</h2>
-      <p>둘 중 더 끌리는 쪽을 골라주세요</p>
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-900 to-black flex flex-col items-center justify-center px-4">
 
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '40px', marginTop: '30px' }}>
+      {/* 라운드 표시 */}
+      <div className="mb-8 text-center">
+        <p className="text-purple-300 text-sm mb-2">ROUND</p>
+        <p className="text-white text-4xl font-bold">{round} <span className="text-purple-400 text-2xl">/ {TOTAL_ROUNDS}</span></p>
+
+        {/* 진행바 */}
+        <div className="w-64 h-2 bg-white/20 rounded-full mt-3 overflow-hidden">
+          <div
+            className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-300"
+            style={{ width: (round / TOTAL_ROUNDS * 100) + '%' }}
+          />
+        </div>
+      </div>
+
+      <p className="text-purple-200 mb-8 text-lg">더 끌리는 쪽을 선택하세요</p>
+
+      {/* 아이돌 카드 2개 */}
+      <div className="flex gap-6 items-center">
         {pair.map((idol) => (
           <div
             key={idol.id}
             onClick={() => handlePick(idol)}
-            style={{ cursor: 'pointer', border: '1px solid #ccc', padding: '30px', borderRadius: '8px' }}
+            className="cursor-pointer group"
           >
-            <img
-              src={idol.photoUrl}
-              alt={idol.name}
-              style={{ width: '300px', height: '400px', objectFit: 'cover' }}
-            />
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden hover:scale-105 hover:border-pink-400 border-2 transition-all duration-200 shadow-2xl">
+              <img
+                src={idol.photoUrl}
+                alt={idol.name}
+                className="w-56 h-72 object-cover group-hover:brightness-110 transition-all duration-200"
+              />
+            </div>
           </div>
         ))}
       </div>
 
+      {/* 별로에요 버튼 */}
       <button
         onClick={handleSkip}
-        style={{ marginTop: '20px', padding: '8px 20px', color: '#999' }}
+        className="mt-8 text-purple-400 hover:text-purple-200 text-sm transition-colors duration-200 underline underline-offset-4"
       >
         둘 다 별로에요
       </button>
