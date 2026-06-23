@@ -15,13 +15,13 @@ function Result() {
   async function scoring() {
     setProgress(10)
 
-    const idolRes = await fetch('http://localhost:8080/api/idols/gender/' + state.gender)
+    const idolRes = await fetch('https://dolgaeting-backend.onrender.com/api/idols/gender/' + state.gender)
     const idols = await idolRes.json()
 
     setProgress(20)
 
     const tagPromises = idols.map((idol) =>
-      fetch('http://localhost:8080/api/idols/' + idol.id + '/tags')
+      fetch('https://dolgaeting-backend.onrender.com/api/idols/' + idol.id + '/tags')
         .then((res) => res.json())
         .then((tags) => ({ idolId: idol.id, tags: tags.map((t) => t.name) }))
     )

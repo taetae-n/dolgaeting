@@ -11,26 +11,26 @@ function Manage() {
   const navigate = useNavigate()
 
   function loadIdols() {
-    fetch('http://localhost:8080/api/idols')
+    fetch('https://dolgaeting-backend.onrender.com/api/idols')
       .then((res) => res.json())
       .then((data) => setIdols(data))
   }
 
   useEffect(() => {
     loadIdols()
-    fetch('http://localhost:8080/api/tags')
+    fetch('https://dolgaeting-backend.onrender.com/api/tags')
       .then((res) => res.json())
       .then((data) => setAllTags(data))
   }, [])
 
   function handleDelete(idolId) {
-    fetch('http://localhost:8080/api/idols/' + idolId, {
+    fetch('https://dolgaeting-backend.onrender.com/api/idols/' + idolId, {
       method: 'DELETE'
     }).then(() => loadIdols())
   }
 
   function handleUpdate() {
-    fetch('http://localhost:8080/api/idols/' + selectedIdol.id, {
+    fetch('https://dolgaeting-backend.onrender.com/api/idols/' + selectedIdol.id, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(selectedIdol)
@@ -46,7 +46,7 @@ function Manage() {
   function openIdol(idol) {
     setSelectedIdol(idol)
     setIsEditing(false)
-    fetch('http://localhost:8080/api/idols/' + idol.id + '/tags')
+    fetch('https://dolgaeting-backend.onrender.com/api/idols/' + idol.id + '/tags')
       .then((res) => res.json())
       .then((data) => setSelectedIdolTags(data))
   }
@@ -54,13 +54,13 @@ function Manage() {
   function toggleIdolTag(tagId) {
     const hasTag = selectedIdolTags.some((t) => t.id === tagId)
     if (hasTag) {
-      fetch('http://localhost:8080/api/idols/' + selectedIdol.id + '/tags/' + tagId, {
+      fetch('https://dolgaeting-backend.onrender.com/api/idols/' + selectedIdol.id + '/tags/' + tagId, {
         method: 'DELETE'
       }).then(() => {
         setSelectedIdolTags(selectedIdolTags.filter((t) => t.id !== tagId))
       })
     } else {
-      fetch('http://localhost:8080/api/idols/' + selectedIdol.id + '/tags/' + tagId, {
+      fetch('https://dolgaeting-backend.onrender.com/api/idols/' + selectedIdol.id + '/tags/' + tagId, {
         method: 'POST'
       }).then(() => {
         const addedTag = allTags.find((t) => t.id === tagId)

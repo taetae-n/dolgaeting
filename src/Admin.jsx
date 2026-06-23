@@ -16,13 +16,13 @@ function Admin() {
   const navigate = useNavigate()
 
   function loadIdols() {
-    fetch('http://localhost:8080/api/idols')
+    fetch('https://dolgaeting-backend.onrender.com/api/idols')
       .then((response) => response.json())
       .then((data) => setIdols(data))
   }
 
   function loadTags() {
-    fetch('http://localhost:8080/api/tags')
+    fetch('https://dolgaeting-backend.onrender.com/api/tags')
       .then((res) => res.json())
       .then((data) => setTags(data))
   }
@@ -33,7 +33,7 @@ function Admin() {
   }, [])
 
   function handleSubmit() {
-    fetch('http://localhost:8080/api/idols', {
+    fetch('https://dolgaeting-backend.onrender.com/api/idols', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -45,7 +45,7 @@ function Admin() {
         const newIdolId = data.id
         return Promise.all(
           selectedTagIds.map((tagId) =>
-            fetch('http://localhost:8080/api/idols/' + newIdolId + '/tags/' + tagId, {
+            fetch('https://dolgaeting-backend.onrender.com/api/idols/' + newIdolId + '/tags/' + tagId, {
               method: 'POST'
             })
           )
@@ -71,7 +71,7 @@ function Admin() {
 
     Promise.all(
       tagNames.map((oneTag) =>
-        fetch('http://localhost:8080/api/tags', {
+        fetch('https://dolgaeting-backend.onrender.com/api/tags', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ name: oneTag })

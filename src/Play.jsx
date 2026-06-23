@@ -14,7 +14,7 @@ function Play() {
   const { state } = useLocation()
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/idols/gender/' + gender)
+    fetch('https://dolgaeting-backend.onrender.com/api/idols/gender/' + gender)
       .then((res) => res.json())
       .then((data) => {
         setIdols(data)

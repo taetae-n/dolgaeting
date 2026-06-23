@@ -1,6 +1,6 @@
 const fs = require('fs')
 
-const API = 'http://localhost:8080'
+const API = 'https://dolgaeting-backend.onrender.com'
 
 async function main() {
   // 1. JSON 파일 읽기
