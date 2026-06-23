@@ -17,7 +17,7 @@ function Home() {
   return (
     <div style={{ padding: '40px', fontFamily: 'sans-serif' }}>
       <h1>덕질가이드: 돌개팅</h1>
-      <p>나도 몰랐던 최애를 찾아드려요!</p>
+      <p>당신의 아이돌을 찾아드려요!</p>
 
       <div style={{ marginBottom: '16px' }}>
         <label>이름: </label>

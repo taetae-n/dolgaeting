@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 function Admin() {
   const [name, setName] = useState('')
@@ -91,6 +92,7 @@ function Admin() {
     }
   }
 
+  const navigate = useNavigate()
 
   return (
     <div style={{ padding: '40px', fontFamily: 'sans-serif' }}>
@@ -145,15 +147,6 @@ function Admin() {
       </div>
 
       <div style={{ marginBottom: '16px' }}>
-        <label>직캠 링크: </label>
-        <input
-          type="text"
-          value={fancamUrl}
-          onChange={(e) => setFancamUrl(e.target.value)}
-        />
-      </div>
-
-      <div style={{ marginBottom: '16px' }}>
         <label>사진 주소: </label>
         <input
           type="text"
@@ -199,6 +192,11 @@ function Admin() {
       </div>
 
       <button onClick={handleSubmit}>등록</button>
+      <button
+        onClick={() => navigate('/manage')} style={{ marginLeft: '8px' }}
+      >
+        아이돌 목록
+      </button>
     </div>
   )
 }

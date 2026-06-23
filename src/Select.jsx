@@ -11,7 +11,7 @@ function Select() {
   return (
     <div style={{ padding: '40px', fontFamily: 'sans-serif' }}>
       <h1>누구를 찾아볼까요?</h1>
-      <p>보고 싶은 아이돌을 선택하세요</p>
+      <p>성별을 선택하세요</p>
 
       <button
         onClick={() => chooseGender('M')}

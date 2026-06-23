@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useNavigate, useParams, useLocation } from 'react-router-dom'
 
-const TOTAL_ROUNDS = 5
+const TOTAL_ROUNDS = 20
 
 function Play() {
+  const [remaining, setRemaining] = useState([])
   const [idols, setIdols] = useState([])
   const [pair, setPair] = useState([])
   const [round, setRound] = useState(1)
@@ -17,14 +18,11 @@ function Play() {
       .then((res) => res.json())
       .then((data) => {
         setIdols(data)
-        setPair(pickTwo(data))
+        const shuffled = [...data].sort(() => Math.random() - 0.5)
+        setPair([shuffled[0], shuffled[1]])
+        setRemaining(shuffled.slice(2))
       })
   }, [])
-
-  function pickTwo(list) {
-    const shuffled = [...list].sort(() => Math.random() - 0.5)
-    return [shuffled[0], shuffled[1]]
-  }
 
  function handlePick(winner) {
     const loser = pair.find((idol) => idol.id !== winner.id)
@@ -33,11 +31,26 @@ function Play() {
 
     if (round >= TOTAL_ROUNDS) {
       console.log('기록:', newPicks)
-      navigate('/result', { state: { ...state, picks: newPicks } })
+      navigate('/result', { state: { ...state, picks: newPicks, gender: gender } })
       return
     }
+    setPair([remaining[0], remaining[1]])
+    setRemaining(remaining.slice(2))
     setRound(round + 1)
-    setPair(pickTwo(idols))
+  }
+
+  function handleSkip() {
+    const newPicks = [...picks, { winner: null, loser: null, pair: pair }]
+    setPicks(newPicks)
+
+    if (round >= TOTAL_ROUNDS) {
+      navigate('/result', { state: { ...state, picks: newPicks, gender: gender } })
+      return
+    }
+
+    setPair([remaining[0], remaining[1]])
+    setRemaining(remaining.slice(2))
+    setRound(round + 1)
   }
 
   if (pair.length < 2) {
@@ -59,11 +72,18 @@ function Play() {
             <img
               src={idol.photoUrl}
               alt={idol.name}
-              style={{ width: '150px', height: '150px', objectFit: 'cover' }}
+              style={{ width: '300px', height: '400px', objectFit: 'cover' }}
             />
           </div>
         ))}
       </div>
+
+      <button
+        onClick={handleSkip}
+        style={{ marginTop: '20px', padding: '8px 20px', color: '#999' }}
+      >
+        둘 다 별로에요
+      </button>
     </div>
   )
 }

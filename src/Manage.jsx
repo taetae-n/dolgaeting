@@ -175,10 +175,6 @@ function Manage() {
                     <option value="ESTJ">ESTJ</option>
                   </select>
                 </div>
-                <div><label>직캠 링크: </label>
-                  <input value={selectedIdol.fancamUrl || ''}
-                    onChange={(e) => setSelectedIdol({ ...selectedIdol, fancamUrl: e.target.value })} />
-                </div>
                 <div><label>사진 주소: </label>
                   <input value={selectedIdol.photoUrl || ''}
                     onChange={(e) => setSelectedIdol({ ...selectedIdol, photoUrl: e.target.value })} />
@@ -224,7 +220,6 @@ function Manage() {
                 <p>그룹: {selectedIdol.groupName}</p>
                 <p>성별: {selectedIdol.gender}</p>
                 <p>MBTI: {selectedIdol.mbti}</p>
-                <p>직캠: <a href={selectedIdol.fancamUrl} target="_blank" rel="noopener noreferrer">{selectedIdol.fancamUrl}</a></p>
                 <p>소개: {selectedIdol.introPoint}</p>
                 <p>태그: {selectedIdolTags.map((tag) => '#' + tag.name).join(' ')}</p>
                 <button onClick={() => setSelectedIdol(null)}>닫기</button>
