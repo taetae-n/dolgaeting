@@ -9,11 +9,19 @@ function Manage() {
   const [isEditing, setIsEditing] = useState(false)
   const [searchText, setSearchText] = useState('')
   const navigate = useNavigate()
+  const [sessions, setSessions] = useState([])
+  const [showSessions, setShowSessions] = useState(false)
 
   function loadIdols() {
     fetch('https://dolgaeting-backend.onrender.com/api/idols')
       .then((res) => res.json())
       .then((data) => setIdols(data))
+  }
+
+  function loadSessions() {
+    fetch('https://dolgaeting-backend.onrender.com/api/sessions')
+      .then((res) => res.json())
+      .then((data) => setSessions(data))
   }
 
   useEffect(() => {
@@ -98,6 +106,13 @@ function Manage() {
               <span className="text-pink-300"> / 여: {idols.filter((i) => i.gender === 'F').length}명)</span>
             </p>
           </div>
+          <div className="flex gap-2"></div>
+          <button
+              onClick={() => { setShowSessions(!showSessions); loadSessions() }}
+              className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-5 py-2.5 rounded-xl hover:scale-105 transition-all duration-200"
+            >
+              📊 이용 기록
+            </button>
           <button
             onClick={() => navigate('/admin')}
             className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold px-5 py-2.5 rounded-xl hover:scale-105 transition-all duration-200"
@@ -105,6 +120,30 @@ function Manage() {
             + 새 아이돌
           </button>
         </div>
+
+        {showSessions && (
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 mb-6">
+            <h2 className="text-white font-bold text-xl mb-4">📊 이용 기록 ({sessions.length}명)</h2>
+            <div className="space-y-2 max-h-60 overflow-y-auto">
+              {sessions.length === 0 ? (
+                <p className="text-purple-300 text-sm">아직 기록이 없어요.</p>
+              ) : (
+                [...sessions].reverse().map((session) => (
+                  <div key={session.id} className="flex items-center justify-between bg-white/5 rounded-xl px-4 py-3">
+                    <div>
+                      <span className="text-white font-medium">{session.userName}</span>
+                      <span className="text-purple-300 text-sm ml-2">({session.userMbti})</span>
+                    </div>
+                    <div className="text-right">
+                      <p className="text-pink-300 text-sm">💜 {session.recommendedIdol}</p>
+                      <p className="text-purple-400 text-xs">{session.totalRounds}라운드</p>
+                    </div>
+                  </div>
+                ))
+              )}
+            </div>
+          </div>
+        )}
 
         {/* 검색 */}
         <div className="mb-6">
