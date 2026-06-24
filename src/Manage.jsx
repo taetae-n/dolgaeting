@@ -200,10 +200,6 @@ function Manage() {
                   <label className={labelClass}>사진 주소</label>
                   <input value={selectedIdol.photoUrl || ''} onChange={(e) => setSelectedIdol({ ...selectedIdol, photoUrl: e.target.value })} className={inputClass} />
                 </div>
-                <div>
-                  <label className={labelClass}>소개</label>
-                  <textarea value={selectedIdol.introPoint || ''} onChange={(e) => setSelectedIdol({ ...selectedIdol, introPoint: e.target.value })} className={inputClass + " resize-none h-20"} />
-                </div>
 
                 {/* 태그 편집 */}
                 <div>
