@@ -5,14 +5,15 @@ import Manage from './Manage'
 import Select from './Select'
 import Play from './Play'
 import Result from './Result'
+import AdminAuth from './AdminAuth'
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/admin" element={<Admin />} />
-        <Route path="/manage" element={<Manage />} />
+        <Route path="/admin" element={<AdminAuth><Admin /></AdminAuth>} />
+        <Route path="/manage" element={<AdminAuth><Manage /></AdminAuth>} />  
         <Route path="/select" element={<Select />} />
         <Route path="/play/:gender" element={<Play />} />
         <Route path="/result" element={<Result />} />
