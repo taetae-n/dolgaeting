@@ -19,13 +19,13 @@ function Home() {
 
       {/* 타이틀 */}
       <div className="text-center mb-12">
-        <h1 className="text-6xl font-bold text-white mb-4">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-2">
           💜 돌개팅 💜
         </h1>
-        <h3 className="text-3xl font-semibold text-pink-300 mb-2">
+        <h2 className="text-lg md:text-xl font-semibold text-pink-300 mb-2">
           입덕가이드
-        </h3>
-        <p className="text-purple-200 text-lg">
+        </h2>
+        <p className="text-purple-200 text-base md:text-lg">
           당신의 아이돌을 찾아드려요🪄
         </p>
       </div>

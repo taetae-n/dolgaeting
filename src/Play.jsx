@@ -25,7 +25,7 @@ function Play() {
         setIsLoading(false)
       })
   }, [])
-  
+
   useEffect(() => {
     if (remaining.length > 0) {
       remaining.slice(0, 4).forEach((idol) => {
@@ -107,7 +107,7 @@ function Play() {
               <img
                 src={idol.photoUrl}
                 alt={idol.name}
-                className="w-56 h-72 object-cover group-hover:brightness-110 transition-all duration-200"
+                className="w-36 h-48 md:w-56 md:h-72 object-cover object-top group-hover:brightness-110 transition-all duration-200"
               />
             </div>
           </div>

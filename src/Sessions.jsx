@@ -26,12 +26,12 @@ function Sessions() {
 
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-4xl font-bold text-white">📊 이용 기록</h1>
+            <h1 className="text-2xl md:text-4xl font-bold text-white">📊 이용 기록</h1>
             <p className="text-purple-300 text-sm mt-1">총 {sessions.length}명이 이용했어요</p>
           </div>
           <button
             onClick={() => navigate('/manage')}
-            className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-5 py-2.5 rounded-xl hover:scale-105 transition-all duration-200"
+            className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-3 py-2 rounded-xl text-sm hover:scale-105 transition-all duration-200 whitespace-nowrap"
           >
             ← 관리 페이지
           </button>

@@ -93,25 +93,27 @@ function Manage() {
         {/* 헤더 */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-4xl font-bold text-white">아이돌 관리</h1>
-            <p className="text-purple-300 text-sm mt-1">총 {idols.length}명
+            <h1 className="text-2xl md:text-4xl font-bold text-white">아이돌 관리</h1>
+            <p className="text-purple-300 text-sm mt-1">
+              총 {idols.length}명
               <span className="text-blue-300 ml-2">(남: {idols.filter((i) => i.gender === 'M').length}명</span>
               <span className="text-pink-300"> / 여: {idols.filter((i) => i.gender === 'F').length}명)</span>
             </p>
           </div>
-          <div className="flex gap-2"></div>
-          <button
+          <div className="flex flex-col md:flex-row gap-2">
+            <button
               onClick={() => navigate('/sessions')}
-              className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-5 py-2.5 rounded-xl hover:scale-105 transition-all duration-200"
+              className="bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-3 py-2 rounded-xl text-sm hover:scale-105 transition-all duration-200"
             >
               📊 이용 기록
             </button>
-          <button
-            onClick={() => navigate('/admin')}
-            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold px-5 py-2.5 rounded-xl hover:scale-105 transition-all duration-200"
-          >
-            + 새 아이돌
-          </button>
+            <button
+              onClick={() => navigate('/admin')}
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold px-3 py-2 rounded-xl text-sm hover:scale-105 transition-all duration-200"
+            >
+              + 새 아이돌
+            </button>
+          </div>
         </div>
 
 

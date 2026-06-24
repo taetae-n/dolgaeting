@@ -185,7 +185,7 @@ function Result() {
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-900 to-black px-4 py-12">
 
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold text-white mb-2">
+        <h1 className="text-2xl md:text-4xl font-bold text-white mb-2">
           {state.userName}님의 추천 아이돌!
         </h1>
         <p className="text-purple-300">취향 분석이 완료됐어요 ✨</p>
@@ -196,14 +196,37 @@ function Result() {
         <p className="text-purple-100 text-base leading-relaxed">💜 {analyzePreference()}</p>
       </div>
 
-      {/* 결과 카드 3개 — 시상대 배치 */}
-      <div className="flex justify-center items-end gap-6 max-w-4xl mx-auto">
+        {/* 모바일: 세로 배치 / 데스크탑: 시상대 배치 */}
+      <div className="flex flex-col md:flex-row md:justify-center md:items-end gap-4 md:gap-6 max-w-4xl mx-auto">
 
-        {/* 2등 — 왼쪽 */}
+        {/* 모바일에서 1등 먼저 */}
+        <div className="md:hidden">
+          {topIdols[0] && (
+            <div className="bg-white/10 backdrop-blur-md border border-yellow-300/80 ring-4 ring-yellow-300/40 rounded-3xl overflow-hidden shadow-2xl gold-shimmer">
+              <div className="relative">
+                <img src={topIdols[0].photoUrl} alt={topIdols[0].name} className="w-full h-96 object-cover object-top rounded-t-3xl" />
+                <div className="absolute top-3 left-3 text-4xl">🥇</div>
+              </div>
+              <div className="p-4 text-center">
+                <h2 className="text-white font-bold text-xl">{topIdols[0].name}</h2>
+                <p className="text-purple-300 text-sm mb-1">{topIdols[0].groupName}</p>
+                <p className="text-purple-400 text-xs">MBTI: {topIdols[0].mbti}</p>
+                <p className="text-xs text-purple-300/70 mt-2">{topIdols[0].idolTags.map((t) => '#' + t).join(' ')}</p>
+                <a href={'https://www.youtube.com/results?search_query=' + encodeURIComponent(topIdols[0].groupName + ' ' + topIdols[0].name + ' 직캠')}
+                  target="_blank" rel="noopener noreferrer"
+                  className="mt-3 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-white/20 transition-all duration-200">
+                  🎬 직캠 검색
+                </a>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* 2등 — 모바일: 세로 / 데스크탑: 왼쪽 */}
         {topIdols[1] && (
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden shadow-2xl w-52 mb-0">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden shadow-2xl md:w-52">
             <div className="relative">
-              <img src={topIdols[1].photoUrl} alt={topIdols[1].name} className="w-52 h-64 object-cover rounded-t-3xl" />
+              <img src={topIdols[1].photoUrl} alt={topIdols[1].name} className="w-full md:w-52 h-[400px] md:h-64 object-cover object-top rounded-t-3xl" />
               <div className="absolute top-3 left-3 text-3xl">🥈</div>
             </div>
             <div className="p-4 text-center">
@@ -211,41 +234,41 @@ function Result() {
               <p className="text-purple-300 text-xs mb-1">{topIdols[1].groupName}</p>
               <p className="text-purple-400 text-xs">MBTI: {topIdols[1].mbti}</p>
               <p className="text-xs text-purple-300/70 mt-1">{topIdols[1].idolTags.map((t) => '#' + t).join(' ')}</p>
-                            
               <a href={'https://www.youtube.com/results?search_query=' + encodeURIComponent(topIdols[1].groupName + ' ' + topIdols[1].name + ' 직캠')}
                 target="_blank" rel="noopener noreferrer"
-                className="mt-3 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-white/20 hover:scale-105 transition-all duration-200"
-              >🎬 직캠 검색</a>
+                className="mt-2 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full hover:bg-white/20 transition-all duration-200">
+                🎬 직캠 검색
+              </a>
             </div>
           </div>
         )}
 
-        {/* 1등 — 가운데, 제일 크게 */}
+        {/* 1등 — 데스크탑에서만 가운데 */}
         {topIdols[0] && (
-          <div className="bg-white/10 backdrop-blur-md rounded-3xl shadow-2xl w-64 scale-105 gold-shimmer">
+          <div className="hidden md:block bg-white/10 backdrop-blur-md border border-yellow-300/80 ring-4 ring-yellow-300/40 rounded-3xl overflow-hidden shadow-2xl w-64 scale-105 gold-shimmer">
             <div className="relative">
-                <img src={topIdols[0].photoUrl} alt={topIdols[0].name} className="w-64 h-80 object-cover rounded-t-3xl" />
-                <div className="absolute top-3 left-3 text-4xl">🥇</div>
-              </div>
+              <img src={topIdols[0].photoUrl} alt={topIdols[0].name} className="w-full h-80 object-cover object-top rounded-t-3xl" />
+              <div className="absolute top-3 left-3 text-4xl">🥇</div>
+            </div>
             <div className="p-5 text-center">
               <h2 className="text-white font-bold text-xl">{topIdols[0].name}</h2>
               <p className="text-purple-300 text-sm mb-1">{topIdols[0].groupName}</p>
               <p className="text-purple-400 text-xs">MBTI: {topIdols[0].mbti}</p>
               <p className="text-xs text-purple-300/70 mt-2">{topIdols[0].idolTags.map((t) => '#' + t).join(' ')}</p>
-                            
               <a href={'https://www.youtube.com/results?search_query=' + encodeURIComponent(topIdols[0].groupName + ' ' + topIdols[0].name + ' 직캠')}
                 target="_blank" rel="noopener noreferrer"
-                className="mt-3 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-white/20 hover:scale-105 transition-all duration-200"
-              >🎬 직캠 검색</a>
+                className="mt-3 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-white/20 transition-all duration-200">
+                🎬 직캠 검색
+              </a>
             </div>
           </div>
         )}
 
-        {/* 3등 — 오른쪽 */}
+        {/* 3등 — 모바일: 세로 / 데스크탑: 오른쪽 */}
         {topIdols[2] && (
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden shadow-2xl w-52">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden shadow-2xl md:w-52">
             <div className="relative">
-              <img src={topIdols[2].photoUrl} alt={topIdols[2].name} className="w-52 h-64 object-cover rounded-t-3xl" />
+              <img src={topIdols[2].photoUrl} alt={topIdols[2].name} className="w-full md:w-52 h-[400px] md:h-64 object-cover object-top rounded-t-3xl" />
               <div className="absolute top-3 left-3 text-3xl">🥉</div>
             </div>
             <div className="p-4 text-center">
@@ -253,11 +276,11 @@ function Result() {
               <p className="text-purple-300 text-xs mb-1">{topIdols[2].groupName}</p>
               <p className="text-purple-400 text-xs">MBTI: {topIdols[2].mbti}</p>
               <p className="text-xs text-purple-300/70 mt-1">{topIdols[2].idolTags.map((t) => '#' + t).join(' ')}</p>
-                            
               <a href={'https://www.youtube.com/results?search_query=' + encodeURIComponent(topIdols[2].groupName + ' ' + topIdols[2].name + ' 직캠')}
                 target="_blank" rel="noopener noreferrer"
-                className="mt-3 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-white/20 hover:scale-105 transition-all duration-200"
-              >🎬 직캠 검색</a>
+                className="mt-2 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full hover:bg-white/20 transition-all duration-200">
+                🎬 직캠 검색
+              </a>
             </div>
           </div>
         )}
