@@ -7,7 +7,6 @@ function Admin() {
   const [mbti, setMbti] = useState('INFP')
   const [gender, setGender] = useState('M')
   const [fancamUrl, setFancamUrl] = useState('')
-  const [introPoint, setIntroPoint] = useState('')
   const [idols, setIdols] = useState([])
   const [tagName, setTagName] = useState('')
   const [tags, setTags] = useState([])
@@ -37,7 +36,7 @@ function Admin() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        name, gender, groupName, mbti, fancamUrl, introPoint, photoUrl
+        name, gender, groupName, mbti, fancamUrl, photoUrl
       })
     })
       .then((response) => response.json())
@@ -142,12 +141,6 @@ function Admin() {
             <label className={labelClass}>사진 주소</label>
             <input type="text" value={photoUrl} onChange={(e) => setPhotoUrl(e.target.value)}
               placeholder="이미지 URL" className={inputClass} />
-          </div>
-
-          <div>
-            <label className={labelClass}>소개</label>
-            <textarea value={introPoint} onChange={(e) => setIntroPoint(e.target.value)}
-              placeholder="매력 포인트" className={inputClass + " resize-none h-24"} />
           </div>
 
           {/* 태그 추가 */}
