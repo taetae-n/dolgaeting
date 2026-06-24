@@ -6,6 +6,7 @@ import Select from './Select'
 import Play from './Play'
 import Result from './Result'
 import AdminAuth from './AdminAuth'
+import Sessions from './Sessions'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/select" element={<Select />} />
         <Route path="/play/:gender" element={<Play />} />
         <Route path="/result" element={<Result />} />
+        <Route path="/sessions" element={<AdminAuth><Sessions /></AdminAuth>} />
       </Routes>
     </BrowserRouter>
   )
