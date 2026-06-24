@@ -24,6 +24,7 @@ function Manage() {
   }, [])
 
   function handleDelete(idolId) {
+    if (!window.confirm('정말 삭제할까요?')) return
     fetch('https://dolgaeting-backend.onrender.com/api/idols/' + idolId, {
       method: 'DELETE'
     }).then(() => loadIdols())
