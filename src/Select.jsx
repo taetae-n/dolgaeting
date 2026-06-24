@@ -33,7 +33,7 @@ function Select() {
 
         {/* 여자 아이돌 */}
         <button
-          onClick={() => chooseGender('M')}
+          onClick={() => chooseGender('F')}
           className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 w-36 md:w-52 text-center hover:bg-white/20 hover:scale-105 transition-all duration-200 shadow-2xl group"
         >
           <div className="text-4xl md:text-6xl mb-4">👩‍🎤</div>
