@@ -25,6 +25,15 @@ function Play() {
         setIsLoading(false)
       })
   }, [])
+  
+  useEffect(() => {
+    if (remaining.length > 0) {
+      remaining.slice(0, 4).forEach((idol) => {
+        const img = new Image()
+        img.src = idol.photoUrl
+      })
+    }
+  }, [pair])
 
   function handlePick(winner) {
     const loser = pair.find((idol) => idol.id !== winner.id)
