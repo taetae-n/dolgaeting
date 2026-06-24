@@ -12,15 +12,17 @@ function Play() {
   const navigate = useNavigate()
   const { gender } = useParams()
   const { state } = useLocation()
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     fetch('https://dolgaeting-backend.onrender.com/api/idols/gender/' + gender)
       .then((res) => res.json())
       .then((data) => {
-        setIdols(data)
         const shuffled = [...data].sort(() => Math.random() - 0.5)
-        setPair([shuffled[0], shuffled[1]])
+        setIdols(data)
         setRemaining(shuffled.slice(2))
+        setPair([shuffled[0], shuffled[1]])
+        setIsLoading(false)
       })
   }, [])
 
@@ -53,10 +55,14 @@ function Play() {
     setRound(round + 1)
   }
 
-  if (pair.length < 2) {
+  if (isLoading || pair.length < 2) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-900 to-black flex items-center justify-center">
-        <p className="text-white text-xl">불러오는 중...</p>
+      <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-900 to-black flex flex-col items-center justify-center px-4">
+        <h2 className="text-white text-2xl font-bold mb-8">💜 아이돌 불러오는 중...</h2>
+        <div className="w-64 h-3 bg-white/20 rounded-full overflow-hidden">
+          <div className="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full animate-pulse" style={{ width: '70%' }} />
+        </div>
+        <p className="text-purple-300 mt-4 text-sm">잠깐만 기다려주세요 ✨</p>
       </div>
     )
   }
