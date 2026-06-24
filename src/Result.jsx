@@ -124,6 +124,17 @@ function Result() {
       displayScore: (idol.finalScore / maxScore * 100).toFixed(1)
     }))
     setTopIdols(normalized)
+    // 세션 저장
+    fetch('https://dolgaeting-backend.onrender.com/api/sessions', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        userName: state.userName,
+        userMbti: state.userMbti,
+        totalRounds: state.picks.length,
+        recommendedIdol: normalized[0]?.name || ''
+      })
+    })
     setLoading(false)
   }
 
