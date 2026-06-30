@@ -60,10 +60,13 @@ function Result() {
     }
 
     const tagScores = {}
+    const tagConfidence = {}
     for (const tag in tagAppears) {
       const wins = tagWins[tag] || 0
       const appears = tagAppears[tag]
       tagScores[tag] = (wins + 1) / (appears + 2)
+      // 신뢰도: 많이 나올수록 1에 가까워짐 (최대 10번 기준)
+      tagConfidence[tag] = Math.min(appears / 10, 1)
     }
 
     setProgress(80)
@@ -98,23 +101,25 @@ function Result() {
 
       function categoryAvg(categoryList) {
         const matched = idolTags.filter((t) => categoryList.includes(t))
-        if (matched.length === 0) return 0.5
+        if (matched.length === 0) return { score: 0.5, confidence: 0 }
         const total = matched.reduce((sum, t) => sum + (tagScores[t] || 0.5), 0)
-        return total / matched.length
+        const confTotal = matched.reduce((sum, t) => sum + (tagConfidence[t] || 0), 0)
+        return { score: total / matched.length, confidence: confTotal / matched.length }
       }
 
-      const animalScore = categoryAvg(animalTags)
-      const moodScore = categoryAvg(moodTags)
-      const eyelidScore = categoryAvg(eyelidTags)
+      const animal = categoryAvg(animalTags)
+      const mood = categoryAvg(moodTags)
+      const eyelid = categoryAvg(eyelidTags)
 
-      // 동물상 40% + 분위기 40% + 쌍꺼풀 20%
-      const tagAvg = animalScore * 0.4 + moodScore * 0.4 + eyelidScore * 0.2
+      const tagPreferenceScore = animal.score * 0.4 + mood.score * 0.4 + eyelid.score * 0.2
+      const confidenceScore = animal.confidence * 0.4 + mood.confidence * 0.4 + eyelid.confidence * 0.2
       const mbtiScore = mbtiTable[userMbti] ? (mbtiTable[userMbti][idol.mbti] || 0.5) : 0.5
-      const finalScore = 0.88 * tagAvg + 0.12 * mbtiScore
-      return { ...idol, finalScore, tagAvg, mbtiScore, idolTags }
+      const appearanceScore = tagPreferenceScore * 0.9 + confidenceScore * 0.1
+      const finalScore = appearanceScore * 0.85 + mbtiScore * 0.15
+      return { ...idol, finalScore, tagAvg: appearanceScore, mbtiScore, idolTags }
     })
 
-    const filtered = scoredIdols.filter((idol) => idol.mbtiScore > 0.4)
+    const filtered = scoredIdols
     setProgress(100)
     filtered.sort((a, b) => b.finalScore - a.finalScore)
     const top3 = filtered.slice(0, 3)
