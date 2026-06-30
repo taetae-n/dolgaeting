@@ -7,6 +7,13 @@ function Result() {
   const [topIdols, setTopIdols] = useState([])
   const [loading, setLoading] = useState(true)
   const [progress, setProgress] = useState(0)
+  const [fancamClicks, setFancamClicks] = useState(0)
+  const [showCoupon, setShowCoupon] = useState(false)
+  const [modalIdol, setModalIdol] = useState(null)
+const [modalVideos, setModalVideos] = useState([])
+const [modalLoading, setModalLoading] = useState(false)
+const [playingVideo, setPlayingVideo] = useState(null)
+const [watchedVideos, setWatchedVideos] = useState([])
 
   useEffect(() => {
     scoring()
@@ -239,6 +246,48 @@ function Result() {
     setLoading(false)
   }
 
+  function generateCoupon(name) {
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    let code = ''
+    for (let i = 0; i < 6; i++) {
+      code += chars[Math.floor(Math.random() * chars.length)]
+    }
+    return name.toUpperCase() + '-' + code
+  }
+
+  function handleFancamClick() {
+    const newCount = fancamClicks + 1
+    setFancamClicks(newCount)
+    if (newCount >= 3) {
+      setShowCoupon(true)
+    }
+  }
+
+  function openFancamModal(idol) {
+    setModalIdol(idol)
+    setModalLoading(true)
+    setPlayingVideo(null)
+    setWatchedVideos([])
+
+    const query = idol.groupName + ' ' + idol.name + ' 직캠'
+    fetch('https://dolgaeting-backend.onrender.com/api/youtube/search?query=' + encodeURIComponent(query))
+      .then((res) => res.json())
+      .then((data) => {
+        setModalVideos(data)
+        setModalLoading(false)
+      })
+      .catch(() => {
+        setModalVideos([])
+        setModalLoading(false)
+      })
+  }
+
+  function closeFancamModal() {
+    setModalIdol(null)
+    setModalVideos([])
+    setPlayingVideo(null)
+  }
+
   function analyzePreference() {
     if (topIdols.length === 0) return ''
     const top = topIdols[0]
@@ -313,11 +362,11 @@ function Result() {
                 <p className="text-purple-300 text-sm mb-1">{topIdols[0].groupName}</p>
                 <p className="text-purple-400 text-xs">MBTI: {topIdols[0].mbti}</p>
                 <p className="text-xs text-purple-300/70 mt-2">{topIdols[0].idolTags.map((t) => '#' + t).join(' ')}</p>
-                <a href={'https://www.youtube.com/results?search_query=' + encodeURIComponent(topIdols[0].groupName + ' ' + topIdols[0].name + ' 직캠')}
-                  target="_blank" rel="noopener noreferrer"
+                <button
+                  onClick={() => openFancamModal(topIdols[0])}
                   className="mt-3 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-white/20 transition-all duration-200">
-                  🎬 직캠 검색
-                </a>
+                  🎬 직캠 보기
+                </button>
               </div>
             </div>
           )}
@@ -325,63 +374,81 @@ function Result() {
 
         {/* 2등 — 모바일: 세로 / 데스크탑: 왼쪽 */}
         {topIdols[1] && (
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden shadow-2xl md:w-52">
+          <div className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden shadow-2xl md:w-52 cursor-pointer" onClick={() => openFancamModal(topIdols[1])}>
             <div className="relative">
-              <img src={topIdols[1].photoUrl} alt={topIdols[1].name} className="w-full md:w-52 h-[400px] md:h-64 object-cover object-top rounded-t-3xl" />
-              <div className="absolute top-3 left-3 text-3xl">🥈</div>
+             <img src={topIdols[1].photoUrl} alt={topIdols[1].name} className="w-full md:w-52 h-[400px] md:h-64 object-cover object-top rounded-t-3xl" />
+             <div className="absolute top-3 left-3 text-3xl">🥈</div>
+             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 hidden md:flex items-center justify-center rounded-t-3xl">
+              <p className="text-white font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 text-center px-3">
+                {topIdols[1].name}와의 만남을 시작해볼까요?
+              </p>
             </div>
+          </div>
             <div className="p-4 text-center">
               <h2 className="text-white font-bold text-base">{topIdols[1].name}</h2>
               <p className="text-purple-300 text-xs mb-1">{topIdols[1].groupName}</p>
               <p className="text-purple-400 text-xs">MBTI: {topIdols[1].mbti}</p>
               <p className="text-xs text-purple-300/70 mt-1">{topIdols[1].idolTags.map((t) => '#' + t).join(' ')}</p>
-              <a href={'https://www.youtube.com/results?search_query=' + encodeURIComponent(topIdols[1].groupName + ' ' + topIdols[1].name + ' 직캠')}
-                target="_blank" rel="noopener noreferrer"
-                className="mt-2 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full hover:bg-white/20 transition-all duration-200">
-                🎬 직캠 검색
-              </a>
+              <button
+                  onClick={() => openFancamModal(topIdols[1])}
+                  className="mt-3 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-white/20 transition-all duration-200">
+                  🎬 직캠 보기
+                </button>
             </div>
           </div>
         )}
 
         {/* 1등 — 데스크탑에서만 가운데 */}
         {topIdols[0] && (
-          <div className="hidden md:block bg-white/10 backdrop-blur-md border border-yellow-300/80 ring-4 ring-yellow-300/40 rounded-3xl overflow-hidden shadow-2xl w-64 scale-105 gold-shimmer">
+          <div className="hidden md:block group relative bg-white/10 backdrop-blur-md border border-yellow-300/80 ring-4 ring-yellow-300/40 rounded-3xl overflow-hidden shadow-2xl w-64 scale-105 gold-shimmer cursor-pointer"
+                onClick={() => openFancamModal(topIdols[0])}>
             <div className="relative">
               <img src={topIdols[0].photoUrl} alt={topIdols[0].name} className="w-full h-80 object-cover object-top rounded-t-3xl" />
               <div className="absolute top-3 left-3 text-4xl">🥇</div>
+            {/* 호버 오버레이 */}
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center rounded-t-3xl">
+              <p className="text-white font-bold text-sm opacity-0 group-hover:opacity-100 transition-all duration-300 text-center px-4">
+                {topIdols[0].name}와의 만남을 시작해볼까요?
+             </p>
             </div>
+          </div>
+
             <div className="p-5 text-center">
               <h2 className="text-white font-bold text-xl">{topIdols[0].name}</h2>
               <p className="text-purple-300 text-sm mb-1">{topIdols[0].groupName}</p>
               <p className="text-purple-400 text-xs">MBTI: {topIdols[0].mbti}</p>
               <p className="text-xs text-purple-300/70 mt-2">{topIdols[0].idolTags.map((t) => '#' + t).join(' ')}</p>
-              <a href={'https://www.youtube.com/results?search_query=' + encodeURIComponent(topIdols[0].groupName + ' ' + topIdols[0].name + ' 직캠')}
-                target="_blank" rel="noopener noreferrer"
-                className="mt-3 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-white/20 transition-all duration-200">
-                🎬 직캠 검색
-              </a>
+              <button
+                  onClick={() => openFancamModal(topIdols[0])}
+                  className="mt-3 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-white/20 transition-all duration-200">
+                  🎬 직캠 보기
+                </button>
             </div>
           </div>
         )}
 
         {/* 3등 — 모바일: 세로 / 데스크탑: 오른쪽 */}
         {topIdols[2] && (
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden shadow-2xl md:w-52">
+          <div className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl overflow-hidden shadow-2xl md:w-52 cursor-pointer" onClick={() => openFancamModal(topIdols[2])}>
             <div className="relative">
-              <img src={topIdols[2].photoUrl} alt={topIdols[2].name} className="w-full md:w-52 h-[400px] md:h-64 object-cover object-top rounded-t-3xl" />
-              <div className="absolute top-3 left-3 text-3xl">🥉</div>
+            <img src={topIdols[2].photoUrl} alt={topIdols[2].name} className="w-full md:w-52 h-[400px] md:h-64 object-cover object-top rounded-t-3xl" />
+            <div className="absolute top-3 left-3 text-3xl">🥉</div>
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 hidden md:flex items-center justify-center rounded-t-3xl">
+              <p className="text-white font-bold text-xs opacity-0 group-hover:opacity-100 transition-all duration-300 text-center px-3">
+                {topIdols[2].name}와의 만남을 시작해볼까요?
+              </p>
             </div>
+          </div>
             <div className="p-4 text-center">
               <h2 className="text-white font-bold text-base">{topIdols[2].name}</h2>
               <p className="text-purple-300 text-xs mb-1">{topIdols[2].groupName}</p>
               <p className="text-purple-400 text-xs">MBTI: {topIdols[2].mbti}</p>
               <p className="text-xs text-purple-300/70 mt-1">{topIdols[2].idolTags.map((t) => '#' + t).join(' ')}</p>
-              <a href={'https://www.youtube.com/results?search_query=' + encodeURIComponent(topIdols[2].groupName + ' ' + topIdols[2].name + ' 직캠')}
-                target="_blank" rel="noopener noreferrer"
-                className="mt-2 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-3 py-1.5 rounded-full hover:bg-white/20 transition-all duration-200">
-                🎬 직캠 검색
-              </a>
+              <button
+                  onClick={() => openFancamModal(topIdols[2])}
+                  className="mt-3 inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white text-xs font-bold px-4 py-2 rounded-full hover:bg-white/20 transition-all duration-200">
+                  🎬 직캠 보기
+                </button>
             </div>
           </div>
         )}
@@ -396,6 +463,112 @@ function Result() {
           다시 하기 🔄
         </button>
       </div>
+
+      {/* 직캠 모달 */}
+      {modalIdol && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 px-4" onClick={closeFancamModal}>
+          <div
+            className="bg-gradient-to-br from-purple-900 to-pink-900 border border-white/20 rounded-3xl p-6 max-w-lg w-full max-h-[85vh] overflow-y-auto shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-white font-bold text-lg">
+                {modalIdol.name}와의 만남을 시작해볼까요? 💜
+              </h2>
+              <button onClick={closeFancamModal} className="text-purple-300 hover:text-white text-2xl leading-none">
+                ✕
+              </button>
+            </div>
+
+            {playingVideo ? (
+              <div>
+                <div className="aspect-video w-full rounded-xl overflow-hidden mb-4">
+                  <iframe
+                    width="100%"
+                    height="100%"
+                    src={'https://www.youtube.com/embed/' + playingVideo + '?autoplay=1'}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <button
+  onClick={() => {
+    if (!watchedVideos.includes(playingVideo)) {
+      const newWatched = [...watchedVideos, playingVideo]
+      setWatchedVideos(newWatched)
+      if (newWatched.length >= 3) {
+        setShowCoupon(true)
+      }
+    }
+    setPlayingVideo(null)
+  }}
+  className="text-purple-300 text-sm hover:text-white transition-colors"
+>
+  ← 목록으로 돌아가기
+</button>
+              </div>
+            ) : modalLoading ? (
+              <div className="text-center py-12">
+                <p className="text-purple-300">영상을 불러오는 중...</p>
+              </div>
+            ) : modalVideos.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-purple-300">영상을 찾을 수 없어요 😢</p>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                {modalVideos.map((video) => (
+                  <div
+                    key={video.videoId}
+                    onClick={() => {
+                      setPlayingVideo(video.videoId)
+                    }}
+                    className="flex gap-3 bg-white/10 hover:bg-white/20 rounded-xl p-2 cursor-pointer transition-all duration-200"
+                  >
+                    <img src={video.thumbnail} alt={video.title} className="w-28 h-20 object-cover rounded-lg flex-shrink-0" />
+                    <p className="text-white text-sm leading-snug line-clamp-3 self-center">{video.title}</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* 쿠폰 팝업 */}
+      {showCoupon && (
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 px-4">
+          <div className="bg-gradient-to-br from-purple-800 to-pink-800 border border-yellow-300/50 rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl">
+            <div className="text-5xl mb-4">🎉</div>
+            <h2 className="text-white font-bold text-xl mb-2">
+              이 구역의 신입 팬이 되셨습니다!
+            </h2>
+            <p className="text-purple-200 text-sm mb-6">
+              {modalIdol?.name} 직캠 3개 시청 완료
+            </p>
+
+            <div className="bg-white/10 border border-yellow-300/40 rounded-2xl p-4 mb-4">
+              <p className="text-yellow-300 text-xs mb-1">🎫 입덕 인증 쿠폰</p>
+              <p className="text-white font-mono font-bold text-lg tracking-wider">
+                {generateCoupon(modalIdol?.name || 'IDOL')}
+              </p>
+            </div>
+
+            <p className="text-purple-300 text-xs mb-6">
+              * 재미로 보는 가상 쿠폰이에요, 실제 사용은 안 돼요!
+            </p>
+
+            <button
+              onClick={() => setShowCoupon(false)}
+              className="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold px-6 py-3 rounded-xl w-full hover:scale-105 transition-all duration-200"
+            >
+              닫기
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
