@@ -68,6 +68,47 @@ function Result() {
       // 신뢰도: 많이 나올수록 1에 가까워짐 (최대 10번 기준)
       tagConfidence[tag] = Math.min(appears / 10, 1)
     }
+    
+    // 조합 선호도 계산 (동물상 + 분위기 조합)
+    const animalTagList = ['강아지상','고양이상','여우상','곰상','토끼상','늑대상','다람쥐상/햄스터상','호랑이상/맹수상','병아리상']
+    const moodTagList = ['청순/단아','큐트/러블리','섹시/퇴폐','시크/차가운','부드러운/따뜻한']
+
+    const comboWins = {}
+    const comboAppears = {}
+
+    function getCombos(tags) {
+      const animals = tags.filter((t) => animalTagList.includes(t))
+      const moods = tags.filter((t) => moodTagList.includes(t))
+      const combos = []
+      for (const a of animals) {
+        for (const m of moods) {
+          combos.push(a + '+' + m)
+        }
+      }
+      return combos
+    }
+
+    for (const pick of state.picks) {
+      if (pick.winner !== null) {
+        const winnerTags = tagMap[pick.winner.id] || []
+        const loserTags = tagMap[pick.loser.id] || []
+
+        for (const combo of getCombos(winnerTags)) {
+          comboWins[combo] = (comboWins[combo] || 0) + 1
+          comboAppears[combo] = (comboAppears[combo] || 0) + 1
+        }
+        for (const combo of getCombos(loserTags)) {
+          comboAppears[combo] = (comboAppears[combo] || 0) + 1
+        }
+      }
+    }
+
+    const comboScores = {}
+    for (const combo in comboAppears) {
+      const wins = comboWins[combo] || 0
+      const appears = comboAppears[combo]
+      comboScores[combo] = (wins + 1) / (appears + 2)
+    }
 
     setProgress(80)
 
@@ -111,14 +152,22 @@ function Result() {
       const mood = categoryAvg(moodTags)
       const eyelid = categoryAvg(eyelidTags)
 
+      // 콤보 점수 계산
+      const idolCombos = getCombos(idolTags)
+      let comboScore = 0.5
+      if (idolCombos.length > 0) {
+        const comboTotal = idolCombos.reduce((sum, c) => sum + (comboScores[c] || 0.5), 0)
+        comboScore = comboTotal / idolCombos.length
+      }
+
       const tagPreferenceScore = animal.score * 0.4 + mood.score * 0.4 + eyelid.score * 0.2
       const confidenceScore = animal.confidence * 0.4 + mood.confidence * 0.4 + eyelid.confidence * 0.2
       const mbtiScore = mbtiTable[userMbti] ? (mbtiTable[userMbti][idol.mbti] || 0.5) : 0.5
-      const appearanceScore = tagPreferenceScore * 0.9 + confidenceScore * 0.1
+      const appearanceScore = tagPreferenceScore * 0.65 + comboScore * 0.25 + confidenceScore * 0.1
       const finalScore = appearanceScore * 0.85 + mbtiScore * 0.15
+
       return { ...idol, finalScore, tagAvg: appearanceScore, mbtiScore, idolTags }
     })
-
     const filtered = scoredIdols
     setProgress(100)
     filtered.sort((a, b) => b.finalScore - a.finalScore)
