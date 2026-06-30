@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const ADMIN_PASSWORD = 'dolbab2024'  // 원하는 비밀번호로 바꾸세요
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD  
 
 function AdminAuth({ children }) {
   const [password, setPassword] = useState('')
