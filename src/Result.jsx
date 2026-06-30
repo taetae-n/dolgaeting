@@ -110,6 +110,47 @@ function Result() {
       comboScores[combo] = (wins + 1) / (appears + 2)
     }
 
+    // 태그 ELO 계산
+    const tagElo = {}
+    const allTagNames = Object.keys(tagAppears)
+    allTagNames.forEach((tag) => { tagElo[tag] = 1000 })  // 초기값 1000
+
+    function updateElo(winnerTag, loserTag) {
+      const K = 32
+      const ratingWinner = tagElo[winnerTag]
+      const ratingLoser = tagElo[loserTag]
+      const expectedWinner = 1 / (1 + Math.pow(10, (ratingLoser - ratingWinner) / 400))
+      const expectedLoser = 1 / (1 + Math.pow(10, (ratingWinner - ratingLoser) / 400))
+      tagElo[winnerTag] = ratingWinner + K * (1 - expectedWinner)
+      tagElo[loserTag] = ratingLoser + K * (0 - expectedLoser)
+    }
+
+    for (const pick of state.picks) {
+      if (pick.winner !== null) {
+        const winnerTags = tagMap[pick.winner.id] || []
+        const loserTags = tagMap[pick.loser.id] || []
+
+        for (const wTag of winnerTags) {
+          for (const lTag of loserTags) {
+            if (wTag !== lTag) {
+              updateElo(wTag, lTag)
+            }
+          }
+        }
+      }
+    }
+
+    // ELO를 0~1 점수로 정규화
+    const eloValues = Object.values(tagElo)
+    const minElo = Math.min(...eloValues, 1000)
+    const maxElo = Math.max(...eloValues, 1000)
+    const eloRange = maxElo - minElo || 1
+
+    const tagEloScore = {}
+    for (const tag in tagElo) {
+      tagEloScore[tag] = (tagElo[tag] - minElo) / eloRange
+    }
+
     setProgress(80)
 
     const mbtiTable = {
@@ -142,10 +183,15 @@ function Result() {
 
       function categoryAvg(categoryList) {
         const matched = idolTags.filter((t) => categoryList.includes(t))
-        if (matched.length === 0) return { score: 0.5, confidence: 0 }
+        if (matched.length === 0) return { score: 0.5, confidence: 0, elo: 0.5 }
         const total = matched.reduce((sum, t) => sum + (tagScores[t] || 0.5), 0)
         const confTotal = matched.reduce((sum, t) => sum + (tagConfidence[t] || 0), 0)
-        return { score: total / matched.length, confidence: confTotal / matched.length }
+        const eloTotal = matched.reduce((sum, t) => sum + (tagEloScore[t] || 0.5), 0)
+        return {
+          score: total / matched.length,
+          confidence: confTotal / matched.length,
+          elo: eloTotal / matched.length
+        }
       }
 
       const animal = categoryAvg(animalTags)
@@ -161,9 +207,10 @@ function Result() {
       }
 
       const tagPreferenceScore = animal.score * 0.4 + mood.score * 0.4 + eyelid.score * 0.2
+      const tagEloScoreFinal = animal.elo * 0.4 + mood.elo * 0.4 + eyelid.elo * 0.2
       const confidenceScore = animal.confidence * 0.4 + mood.confidence * 0.4 + eyelid.confidence * 0.2
       const mbtiScore = mbtiTable[userMbti] ? (mbtiTable[userMbti][idol.mbti] || 0.5) : 0.5
-      const appearanceScore = tagPreferenceScore * 0.65 + comboScore * 0.25 + confidenceScore * 0.1
+      const appearanceScore = tagPreferenceScore * 0.55 + tagEloScoreFinal * 0.25 + comboScore * 0.15 + confidenceScore * 0.05
       const finalScore = appearanceScore * 0.85 + mbtiScore * 0.15
 
       return { ...idol, finalScore, tagAvg: appearanceScore, mbtiScore, idolTags }
